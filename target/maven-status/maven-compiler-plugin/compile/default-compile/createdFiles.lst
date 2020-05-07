@@ -1,0 +1,5 @@
+com\example\someSpring\HelloController.class
+com\example\someSpring\Application.class
+com\example\someSpring\MvcConfig.class
+com\example\someSpring\GreetingController.class
+com\example\someSpring\SecuringWebApplication.class
