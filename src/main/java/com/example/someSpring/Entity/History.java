@@ -16,6 +16,12 @@ public class History {
     @ManyToOne(fetch = FetchType.EAGER)
     private Algorithm algorithm;
 
+    long number;
+
+    int iterations;
+
+    boolean result;
+
     public History() {
     }
 
@@ -41,5 +47,29 @@ public class History {
 
     public void setAlgorithm(Algorithm algorithm) {
         this.algorithm = algorithm;
+    }
+
+    public long getNumber() {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
+    }
+
+    public int getIterations() {
+        return iterations;
+    }
+
+    public void setIterations(int iterations) {
+        this.iterations = iterations;
+    }
+
+    public boolean isResult() {
+        return result;
+    }
+
+    public void setResult(boolean result) {
+        this.result = result;
     }
 }

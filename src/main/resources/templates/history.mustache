@@ -5,11 +5,53 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div>
+    Ваша история
+</div>
+{{message}}
+<form action="/history" method="post">
+    <div>
+        <label>
+            Число для проверки :
+            <input type="text" name="number"/>
+        </label>
+    </div>
+    <div>
+        <label> Алгоритм :
+            <select name="name">
+                {{#algos}}
+                    <option name="{{name}}">{{name}}</option>
+                {{/algos}}
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>
+            Количество итераций :
+            <input type="text" name="iterations"/>
+        </label>
+    </div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <div><input type="submit" value="Добавить"/></div>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Number</th>
+        <th>Algorithm</th>
+        <th>Iterations</th>
+        <th>Result</th>
+    </tr>
+    </thead>
+    <tbody>
     {{#histories}}
-        <div>
-            <b>{{id}}</b>
-            <b>{{user}}</b>
-            <b>{{algorithm}}</b>
-        </div>
+        <tr>
+            <td>{{number}}</td>
+            <td>{{algorithm}}</td>
+            <td>{{iterations}}</td>
+            <td>{{result}}</td>
+        </tr>
     {{/histories}}
+    </tbody>
+</table>
 </body>

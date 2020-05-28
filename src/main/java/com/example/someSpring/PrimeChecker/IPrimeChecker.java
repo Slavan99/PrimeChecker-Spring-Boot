@@ -1,11 +1,11 @@
-package com.example.someSpring.Entity;
+package com.example.someSpring.PrimeChecker;
 
 import java.util.concurrent.ExecutionException;
 
 public interface IPrimeChecker {
     boolean isPrimeNumber(long n, int iter) throws ExecutionException, InterruptedException;
 
-    default long phi (Long n) {
+    default long phi(Long n) {
         long result = n;
         for (long i=2; i*i<=n; ++i)
             if (n % i == 0) {

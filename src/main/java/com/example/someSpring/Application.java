@@ -1,15 +1,26 @@
 package com.example.someSpring;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
-@EnableZuulProxy
+@EnableAutoConfiguration
+@ComponentScan
 @SpringBootApplication
 public class Application {
 
+    @Bean
+    public Logger logger(){
+        return LoggerFactory.getLogger(Application.class);
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+
     }
 
 }
