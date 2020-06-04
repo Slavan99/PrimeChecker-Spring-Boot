@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity // This tells Hibernate to make a table out of this class
@@ -20,7 +21,7 @@ public class User implements UserDetails {
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
     private String name;
 
@@ -31,10 +32,6 @@ public class User implements UserDetails {
     private String phone;
 
     private String city;
-
-    private String description;
-
-    private double rating;
 
     private int age;
 
@@ -99,6 +96,10 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
+    public void addRole(Role role){
+        this.roles.add(role);
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -121,22 +122,6 @@ public class User implements UserDetails {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
     }
 
     public int getAge() {
@@ -169,6 +154,10 @@ public class User implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isAdmin(){
+        return this.getAuthorities().contains(Role.ADMIN);
     }
 
     @Override

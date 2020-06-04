@@ -4,7 +4,9 @@ import com.example.someSpring.Entity.Role;
 import com.example.someSpring.Entity.User;
 import com.example.someSpring.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -16,13 +18,16 @@ public class RegistrationController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @GetMapping("/registration")
     public String registration(){
         return "registration";
     }
 
     @PostMapping(produces = {"application/xml; charset=UTF-8"}, path = "/registration")
-    public String addUser(User user, Map<String, Object> model){
+    public String addUser(User user, BindingResult bindingResult, Map<String, Object> model){
         User byName = userRepository.findByName(user.getName());
         if(byName != null){
             model.put("message", "User exists!");
@@ -30,7 +35,8 @@ public class RegistrationController {
         }
 
         user.setActive(true);
-        user.setRoles(Collections.singleton(Role.USER));
+        user.addRole(Role.USER);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         return "redirect:/login";
     }

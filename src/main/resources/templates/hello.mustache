@@ -5,16 +5,40 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <form action="/logout" method="post">
-        <input type="submit" value="Sign Out"/>
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-    </form>
+
+<div>
     {{#users}}
-        <div>
-            <b>{{id}}</b>
-            <span>{{name}}</span>
-            <i>{{password}}</i>
-        </div>
+        {{name}}
+        <form action="/hello" method="post">
+            <label> Активен :
+                <select name="active">
+                    <option name="{{#active}} true {{/active}} {{^active}} false {{/active}}">
+                        {{#active}} true {{/active}} {{^active}} false {{/active}}
+                    </option>
+                    <option name="{{^active}} true {{/active}} {{#active}} false {{/active}}">
+                        {{^active}} true {{/active}} {{#active}} false {{/active}}
+                    </option>
+                </select>
+            </label>
+            <label> Администратор :
+                <select name="admin">
+                    <option name="{{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}">
+                        {{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}
+                    </option>
+                    <option name="{{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}">
+                        {{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}
+                    </option>
+                </select>
+            </label>
+            <input type="hidden" name="user_id" value="{{id}}"/>
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <input type="submit" value="Сохранить"/>
+        </form>
     {{/users}}
+</div>
+<div>
+    <a href="/">Back</a>
+</div>
+
 </body>
 </html>
