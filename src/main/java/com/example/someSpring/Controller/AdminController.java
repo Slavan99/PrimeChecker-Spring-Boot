@@ -1,34 +1,20 @@
 package com.example.someSpring.Controller;
 
-import com.example.someSpring.Entity.Algorithm;
-import com.example.someSpring.Entity.History;
 import com.example.someSpring.Entity.Role;
 import com.example.someSpring.Entity.User;
-import com.example.someSpring.Repository.AlgorithmRepository;
-import com.example.someSpring.Repository.HistoryRepository;
 import com.example.someSpring.Repository.UserRepository;
 import com.example.someSpring.Service.UserService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.Valid;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 @Controller
-public class HelloController {
-    @Autowired
-    private UserRepository userRepository;
+public class AdminController {
 
     @Autowired
     private UserService userService;
@@ -75,23 +61,23 @@ public class HelloController {
         return "redirect:/hello";
     }*/
 
-    @GetMapping("/hello")
-    public String hello(@AuthenticationPrincipal User currentUser, Model model) {
+    @GetMapping("/admin")
+    public String admin(@AuthenticationPrincipal User currentUser, Model model) {
         if (!currentUser.getAuthorities().contains(Role.ADMIN)) {
             return "redirect:/";
         }
         Iterable<User> users = userService.findAll();
         model.addAttribute("users", users);
-        return "hello";
+        return "admin";
     }
 
-    @PostMapping("/hello")
+    @PostMapping("/admin")
     public String postUser(@AuthenticationPrincipal User currentUser, @RequestParam Integer user_id,
                            @RequestParam String active, @RequestParam String admin) {
         if (currentUser.getAuthorities().contains(Role.ADMIN)) {
             userService.handleUserActiveAndAdmin(user_id, active, admin);
         }
-        return "redirect:/hello";
+        return "redirect:/admin";
     }
 
 

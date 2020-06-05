@@ -10,6 +10,7 @@ import com.example.someSpring.PrimeChecker.solovaystrassen.SolovayStrassenHandle
 import com.example.someSpring.PrimeChecker.trialdivision.TrialDivisionHandler;
 import com.example.someSpring.Repository.AlgorithmRepository;
 import com.example.someSpring.Repository.HistoryRepository;
+import com.example.someSpring.Service.AlgorithmService;
 import com.example.someSpring.Service.HistoryService;
 import com.example.someSpring.Service.UserService;
 import org.slf4j.Logger;
@@ -34,25 +35,24 @@ public class HistoryController {
     private HistoryService historyService;
 
     @Autowired
-    private AlgorithmRepository algorithmRepository;
+    private AlgorithmService algorithmService;
 
     @Autowired
     private UserService userService;
 
-    @Autowired
-    Logger logger;
 
 
     @GetMapping("/history")
     public String history(@AuthenticationPrincipal User currentUser, Model model) {
         List<History> historiesByUser = historyService.findByUser(currentUser);
-        List<Algorithm> algorithms = (List<Algorithm>) algorithmRepository.findAll();
+        List<Algorithm> algorithms = algorithmService.findAll();
         model.addAttribute("algos", algorithms);
         if (historiesByUser.size() == 0) {
             model.addAttribute("message", "You have no history!");
         } else {
             model.addAttribute("message", "");
             model.addAttribute("histories", historiesByUser);
+            model.addAttribute("hashistory", true);
         }
         return "history";
     }

@@ -1,7 +1,12 @@
 package com.example.someSpring.Controller;
 
+import com.example.someSpring.Entity.User;
+import com.example.someSpring.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,21 +18,22 @@ import java.lang.String;
 @Controller
 public class GreetingController {
 
+    @Autowired
+    private UserService userService;
+
     @GetMapping("/")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
-                           Map<String, Object> model) {
-        model.put("name", name);
+    public String greeting(@AuthenticationPrincipal User user, Model model) {
+
+        if (user != null) {
+            model.addAttribute("name", user.getName());
+            model.addAttribute("isAdmin", user.isAdmin());
+            model.addAttribute("isAuth", true);
+        } else {
+            model.addAttribute("name", "World");
+        }
         return "greeting";
     }
     /*
-    @PostMapping("/hello")
-    public String add(@RequestParam String name, Map<String, Object> model){
-        User user = new User(name);
-        userRepository.save(user);
-
-        return hello(model);
-    }
-
     @PostMapping("filter")
     public String filter(@RequestParam String filter, Map<String, Object> model){
         Iterable<User> byName;

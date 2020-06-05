@@ -2,12 +2,15 @@
 package com.example.someSpring.PrimeChecker.solovaystrassen;
 
 import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.*;
-
+@Component
+@Scope("prototype")
 public class SolovayStrassenHandler implements IPrimeChecker {
     private static volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();

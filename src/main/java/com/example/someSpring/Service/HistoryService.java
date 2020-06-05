@@ -9,6 +9,7 @@ import com.example.someSpring.PrimeChecker.solovaystrassen.SolovayStrassenHandle
 import com.example.someSpring.PrimeChecker.trialdivision.TrialDivisionHandler;
 import com.example.someSpring.Repository.AlgorithmRepository;
 import com.example.someSpring.Repository.HistoryRepository;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,20 +22,31 @@ public class HistoryService {
     private HistoryRepository historyRepository;
 
     @Autowired
-    private AlgorithmRepository algorithmRepository;
+    private AlgorithmService algorithmService;
+
+    @Autowired
+    private TrialDivisionHandler trialDivisionHandler;
+
+    @Autowired
+    private FermatHandler fermatHandler;
+
+    @Autowired
+    private MillerRabinHandler millerRabinHandler;
+
+    @Autowired
+    private SolovayStrassenHandler solovayStrassenHandler;
+
+    @Autowired
+    private Logger logger;
 
     public List<History> findByUser(User user) {
         return historyRepository.findByUser(user);
     }
 
     public String checkNumber(User currentUser, String algorithmName, String numberString, String iterString) throws ExecutionException, InterruptedException {
-        TrialDivisionHandler trialDivisionHandler = new TrialDivisionHandler();
-        FermatHandler fermatHandler = new FermatHandler();
-        MillerRabinHandler millerRabinHandler = new MillerRabinHandler();
-        SolovayStrassenHandler solovayStrassenHandler = new SolovayStrassenHandler();
         History historyAdd = new History();
         historyAdd.setUser(currentUser);
-        historyAdd.setAlgorithm(algorithmRepository.findByName(algorithmName));
+        historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
         long number;
         int iterations;
         try {

@@ -1,24 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Welcome!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 <div>Hello, {{name}}</div>
-<div> <a href="hello">User page</a></div>
-
+<div>
+    {{#isAdmin}}
+        <a href="admin">Admin page</a>
+    {{/isAdmin}}
+</div>
 <div>
     <a href="registration">Registration</a>
 </div>
 <div>
-    <a href="history">User history</a>
+    {{#isAuth}}
+        <a href="history">User history</a>
+    {{/isAuth}}
 </div>
 <div>
-    <a href="logout">Log out</a>
+    {{#isAuth}}
+        <a href="logout">Log out</a>
+    {{/isAuth}}
 </div>
 <div>
-    <a href="login">Log in</a>
+    {{^isAuth}}
+        <a href="login">Log in</a>
+    {{/isAuth}}
 </div>
 </body>
 </html>

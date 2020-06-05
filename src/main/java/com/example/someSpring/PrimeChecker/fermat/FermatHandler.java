@@ -1,11 +1,14 @@
 package com.example.someSpring.PrimeChecker.fermat;
 
 import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
-
+@Component
+@Scope("prototype")
 public class FermatHandler implements IPrimeChecker {
     private static volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();

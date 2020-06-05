@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World!</title>
+    <title>User page</title>
     <meta charset="UTF-8">
 </head>
 <body>
 
 <div>
     {{#users}}
+        <div>
+            <b>User list</b>
+        </div>
         {{name}}
         <form action="/hello" method="post">
-            <label> Активен :
+            <label> Is active :
                 <select name="active">
                     <option name="{{#active}} true {{/active}} {{^active}} false {{/active}}">
                         {{#active}} true {{/active}} {{^active}} false {{/active}}
@@ -20,7 +23,7 @@
                     </option>
                 </select>
             </label>
-            <label> Администратор :
+            <label> Is admin :
                 <select name="admin">
                     <option name="{{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}">
                         {{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}
@@ -32,7 +35,7 @@
             </label>
             <input type="hidden" name="user_id" value="{{id}}"/>
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-            <input type="submit" value="Сохранить"/>
+            <input type="submit" value="Save"/>
         </form>
     {{/users}}
 </div>

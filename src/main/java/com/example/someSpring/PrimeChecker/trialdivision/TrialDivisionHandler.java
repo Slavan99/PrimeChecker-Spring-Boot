@@ -1,14 +1,17 @@
 package com.example.someSpring.PrimeChecker.trialdivision;
 
 import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
-
+@Component
+@Scope("prototype")
 public class TrialDivisionHandler implements IPrimeChecker {
 
-    private static volatile boolean found = false;
+    private volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();
 
     public void handle(Long number) throws ExecutionException, InterruptedException {
@@ -45,7 +48,7 @@ public class TrialDivisionHandler implements IPrimeChecker {
     }
 
 
-    static class TrialDivisionThreadCallable implements Callable<Boolean> {
+    class TrialDivisionThreadCallable implements Callable<Boolean> {
         long numberToCheck;
         long startPos;
 

@@ -6,18 +6,18 @@
 </head>
 <body>
 <div>
-    Ваша история
+    Your history
 </div>
 {{message}}
 <form action="/history" method="post">
     <div>
         <label>
-            Число для проверки :
+            Number to check :
             <input type="text" name="number"/>
         </label>
     </div>
     <div>
-        <label> Алгоритм :
+        <label> Algorithm :
             <select name="name">
                 {{#algos}}
                     <option name="{{name}}">{{name}}</option>
@@ -27,13 +27,14 @@
     </div>
     <div>
         <label>
-            Количество итераций :
+            Iteration number :
             <input type="text" name="iterations"/>
         </label>
     </div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <div><input type="submit" value="Проверить"/></div>
+    <div><input type="submit" value="Check number"/></div>
 </form>
+{{#hashistory}}
 <table class="table">
     <thead>
     <tr>
@@ -54,6 +55,7 @@
     {{/histories}}
     </tbody>
 </table>
+{{/hashistory}}
 <div>
     <a href="/">Back</a>
 </div>

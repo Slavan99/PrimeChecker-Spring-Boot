@@ -23,6 +23,7 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
 
+    @Column(unique = true)
     private String name;
 
     private String email;
@@ -96,7 +97,7 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
-    public void addRole(Role role){
+    public void addRole(Role role) {
         this.roles.add(role);
     }
 
@@ -156,7 +157,7 @@ public class User implements UserDetails {
         this.email = email;
     }
 
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return this.getAuthorities().contains(Role.ADMIN);
     }
 

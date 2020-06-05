@@ -2,13 +2,16 @@
 package com.example.someSpring.PrimeChecker.millerrabin;
 
 import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.*;
-
+@Component
+@Scope("prototype")
 public class MillerRabinHandler implements IPrimeChecker {
     private static volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();
