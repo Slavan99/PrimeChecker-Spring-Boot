@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Service/AlgorithmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/HistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/RegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Service/HistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/homepage.mustache.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" afterDir="false" />
     </list>
@@ -71,7 +62,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -82,8 +73,8 @@
       <recent name="com.example.someSpring" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Вячеслав\IdeaProjects\someSpring\src\main\java\com\example\someSpring\PrimeChecker" />
       <recent name="C:\Users\Вячеслав\IdeaProjects\someSpring\src\main\resources\templates" />
+      <recent name="C:\Users\Вячеслав\IdeaProjects\someSpring\src\main\java\com\example\someSpring\PrimeChecker" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,10 +123,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Template_Data_Languages/0.0.1280.680@0.0.1280.680" timestamp="1590317773893" />
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1590334700367">
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1591438661349">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1590334700367" />
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1591438661349" />
     <state x="438" y="201" width="423" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589882732011">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -144,22 +135,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591258339072" />
-    <state width="1237" height="83" key="GridCell.Tab.0.bottom" timestamp="1591376797648">
+    <state width="1237" height="303" key="GridCell.Tab.0.bottom" timestamp="1591544855326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="83" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591376797648" />
-    <state width="1237" height="83" key="GridCell.Tab.0.center" timestamp="1591376797648">
+    <state width="1237" height="303" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
+    <state width="1237" height="303" key="GridCell.Tab.0.center" timestamp="1591544855326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="83" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591376797648" />
-    <state width="1237" height="83" key="GridCell.Tab.0.left" timestamp="1591376797648">
+    <state width="1237" height="303" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
+    <state width="1237" height="303" key="GridCell.Tab.0.left" timestamp="1591544855326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="83" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591376797648" />
-    <state width="1237" height="83" key="GridCell.Tab.0.right" timestamp="1591376797648">
+    <state width="1237" height="303" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
+    <state width="1237" height="303" key="GridCell.Tab.0.right" timestamp="1591544855326">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="83" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591376797648" />
+    <state width="1237" height="303" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
     <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1591034420113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -200,9 +191,23 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1588774037448" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1591545057322">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1591545057322" />
     <state x="303" y="1" key="search.everywhere.popup" timestamp="1590953281046">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1590953281046" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk-14/lib/src.zip!/java.base/java/lang/annotation/RetentionPolicy.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

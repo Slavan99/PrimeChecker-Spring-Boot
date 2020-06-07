@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User page</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-
+{{> header}}
+{{> navbar}}
 <div>
-    {{#users}}
-        <div>
-            <b>User list</b>
-        </div>
-        {{name}}
-        <form action="/hello" method="post">
-            <label> Is active :
-                <select name="active">
-                    <option name="{{#active}} true {{/active}} {{^active}} false {{/active}}">
-                        {{#active}} true {{/active}} {{^active}} false {{/active}}
-                    </option>
-                    <option name="{{^active}} true {{/active}} {{#active}} false {{/active}}">
-                        {{^active}} true {{/active}} {{#active}} false {{/active}}
-                    </option>
-                </select>
-            </label>
-            <label> Is admin :
-                <select name="admin">
-                    <option name="{{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}">
-                        {{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}
-                    </option>
-                    <option name="{{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}">
-                        {{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}
-                    </option>
-                </select>
-            </label>
-            <input type="hidden" name="user_id" value="{{id}}"/>
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-            <input type="submit" value="Save"/>
-        </form>
-    {{/users}}
+    <b>User list</b>
 </div>
+{{#users}}
+    {{name}}
+    <form action="/admin" method="post">
+        <label> Is active :
+            <select name="active">
+                <option name="{{#active}} true {{/active}} {{^active}} false {{/active}}">
+                    {{#active}} true {{/active}} {{^active}} false {{/active}}
+                </option>
+                <option name="{{^active}} true {{/active}} {{#active}} false {{/active}}">
+                    {{^active}} true {{/active}} {{#active}} false {{/active}}
+                </option>
+            </select>
+        </label>
+        <label> Is admin :
+            <select name="admin">
+                <option name="{{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}">
+                    {{#isAdmin}} true {{/isAdmin}} {{^isAdmin}} false {{/isAdmin}}
+                </option>
+                <option name="{{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}">
+                    {{^isAdmin}} true {{/isAdmin}} {{#isAdmin}} false {{/isAdmin}}
+                </option>
+            </select>
+        </label>
+        <input type="hidden" name="user_id" value="{{id}}"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Save"/>
+    </form>
+{{/users}}
 <div>
-    <a href="/">Back</a>
+    <a href="/" class="btn btn-primary">Back</a>
 </div>
-
-</body>
-</html>
+{{> footer}}

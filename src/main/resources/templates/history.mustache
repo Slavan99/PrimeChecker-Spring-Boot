@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>History</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-<div>
-    Your history
-</div>
+{{> header}}
+{{> navbar}}
 {{message}}
 <form action="/history" method="post">
     <div>
@@ -34,29 +26,32 @@
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <div><input type="submit" value="Check number"/></div>
 </form>
+<div>
+    <b>Your history</b>
+</div>
 {{#hashistory}}
-<table class="table">
-    <thead>
-    <tr>
-        <th>Number</th>
-        <th>Algorithm</th>
-        <th>Iterations</th>
-        <th>Result</th>
-    </tr>
-    </thead>
-    <tbody>
-    {{#histories}}
+    <table class="table">
+        <thead>
         <tr>
-            <td>{{number}}</td>
-            <td>{{algorithm}}</td>
-            <td>{{iterations}}</td>
-            <td>{{result}}</td>
+            <th>Number</th>
+            <th>Algorithm</th>
+            <th>Iterations</th>
+            <th>Result</th>
         </tr>
-    {{/histories}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {{#histories}}
+            <tr>
+                <td>{{number}}</td>
+                <td>{{algorithm}}</td>
+                <td>{{iterations}}</td>
+                <td>{{result}}</td>
+            </tr>
+        {{/histories}}
+        </tbody>
+    </table>
 {{/hashistory}}
 <div>
-    <a href="/">Back</a>
+    <a href="/" class="btn btn-primary">Back</a>
 </div>
-</body>
+{{> footer}}

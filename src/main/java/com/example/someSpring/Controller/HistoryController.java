@@ -41,9 +41,13 @@ public class HistoryController {
     private UserService userService;
 
 
-
     @GetMapping("/history")
     public String history(@AuthenticationPrincipal User currentUser, Model model) {
+        if (currentUser != null) {
+            model.addAttribute("username", currentUser.getName());
+            model.addAttribute("isAdmin", currentUser.isAdmin());
+            model.addAttribute("isAuth", true);
+        }
         List<History> historiesByUser = historyService.findByUser(currentUser);
         List<Algorithm> algorithms = algorithmService.findAll();
         model.addAttribute("algos", algorithms);

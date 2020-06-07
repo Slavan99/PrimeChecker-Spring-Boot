@@ -26,9 +26,11 @@ public class GreetingController {
 
         if (user != null) {
             model.addAttribute("name", user.getName());
+            model.addAttribute("username", user.getName());
             model.addAttribute("isAdmin", user.isAdmin());
             model.addAttribute("isAuth", true);
         } else {
+            model.addAttribute("username", "");
             model.addAttribute("name", "World");
         }
         return "greeting";

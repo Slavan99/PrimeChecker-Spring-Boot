@@ -1,14 +1,16 @@
 package com.example.someSpring.PrimeChecker.trialdivision;
 
 import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+
 @Component
-@Scope("prototype")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class TrialDivisionHandler implements IPrimeChecker {
 
     private volatile boolean found = false;

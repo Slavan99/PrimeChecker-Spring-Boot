@@ -4,6 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,6 +15,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @NotNull
     private String password;
 
     private boolean active;
@@ -24,6 +26,7 @@ public class User implements UserDetails {
     private Set<Role> roles = new HashSet<>();
 
     @Column(unique = true)
+    @NotNull
     private String name;
 
     private String email;

@@ -1,33 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Welcome!</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
+{{> header}}
+{{> navbar}}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 <div>Hello, {{name}}</div>
 <div>
-    {{#isAdmin}}
-        <a href="admin">Admin page</a>
-    {{/isAdmin}}
+    <p>A <b>primality test</b> is an algorithm for determining whether an input number is prime.
+        Among other fields of mathematics, it is used for cryptography.
+    </p>
+    <p>
+        This service provides an opportunity to check if a number is prime using 4 algorithms:
+    <ul>
+        <li><b>Trial division algorithm</b></li>
+        <li><b>Fermat probability algorithm</b></li>
+        <li><b>Miller-Rabin probability algorithm</b></li>
+        <li><b>Solovay-Strassen probability algorithm</b></li>
+    </ul>
 </div>
-<div>
-    <a href="registration">Registration</a>
-</div>
-<div>
-    {{#isAuth}}
-        <a href="history">User history</a>
-    {{/isAuth}}
-</div>
-<div>
-    {{#isAuth}}
-        <a href="logout">Log out</a>
-    {{/isAuth}}
-</div>
-<div>
-    {{^isAuth}}
-        <a href="login">Log in</a>
-    {{/isAuth}}
-</div>
+{{> footer}}
 </body>
 </html>

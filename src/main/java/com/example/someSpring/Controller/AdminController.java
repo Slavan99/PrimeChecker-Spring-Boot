@@ -63,6 +63,11 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String admin(@AuthenticationPrincipal User currentUser, Model model) {
+        if (currentUser != null) {
+            model.addAttribute("username", currentUser.getName());
+            model.addAttribute("isAdmin", currentUser.isAdmin());
+            model.addAttribute("isAuth", true);
+        }
         if (!currentUser.getAuthorities().contains(Role.ADMIN)) {
             return "redirect:/";
         }

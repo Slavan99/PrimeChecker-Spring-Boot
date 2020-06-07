@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registration </title>
-    <meta charset="UTF-8">
-</head>
-<body>
+{{> header}}
 Register
 <div>{{message}}</div>
-
+<div class="container mt-5">
 <form action="/registration" method="post" accept-charset="UTF-8">
-    <div><label> User Name : <input type="text" name="name"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"> User Name : </label>
+        <div class="col-sm-6">
+            <input type="text" name="name" class="form-control" placeholder="User name"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"> Password: </label>
+        <div class="col-sm-6">
+            <input type="password" name="password" class="form-control" placeholder="Password"/>
+        </div>
+    </div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <div><input type="submit" value="Sign Up"/></div>
+    <div><input class="btn btn-primary" type="submit" value="Sign Up"/></div>
 </form>
-</body>
-</html>
+</div>
+{{> footer}}

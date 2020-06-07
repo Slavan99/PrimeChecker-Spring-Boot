@@ -30,6 +30,10 @@ public class RegistrationController {
 
     @PostMapping(produces = {"application/xml; charset=UTF-8"}, path = "/registration")
     public String addUser(User user, Model model) {
+        if (user.getName().equals("") || user.getPassword().equals("")) {
+            model.addAttribute("message", "Wrong data input!");
+            return "registration";
+        }
         User byName = userRepository.findByName(user.getName());
         if (byName != null) {
             model.addAttribute("message", "User exists!");
