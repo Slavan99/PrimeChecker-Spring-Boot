@@ -1,5 +1,6 @@
 package com.example.someSpring.PrimeChecker;
 
+import java.time.LocalTime;
 import java.util.concurrent.ExecutionException;
 
 public interface IPrimeChecker {
