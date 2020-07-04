@@ -1,7 +1,8 @@
-package com.example.someSpring.Entity;
+package com.example.somespring.entity;
 
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class History {
@@ -16,11 +17,13 @@ public class History {
     @ManyToOne(fetch = FetchType.EAGER)
     private Algorithm algorithm;
 
-    long number;
+    private long number;
 
-    int iterations;
+    private int iterations;
 
-    boolean result;
+    private boolean result;
+
+    private LocalDateTime checkDateTime;
 
     public History() {
     }
@@ -72,4 +75,14 @@ public class History {
     public void setResult(boolean result) {
         this.result = result;
     }
+
+    public LocalDateTime getCheckDateTime() {
+        return checkDateTime;
+    }
+
+    public void setCheckDateTime(LocalDateTime checkDateTime) {
+        this.checkDateTime = checkDateTime;
+    }
+
+
 }

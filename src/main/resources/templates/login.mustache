@@ -1,5 +1,5 @@
 {{> header}}
-Log in
+<b>Log in</b>
 <div class="container mt-5">
     <form action="/login" method="post">
         <div class="form-group row">
@@ -17,6 +17,6 @@ Log in
         <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <div><input type="submit" value="Sign In" class="btn btn-primary"/></div>
     </form>
-    <a href="registration" class="btn btn-primary">Registration</a>
+    <a href="registration" id="smb" class="btn btn-primary">Registration</a>
 </div>
 {{> footer}}

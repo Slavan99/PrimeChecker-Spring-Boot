@@ -1,10 +1,15 @@
-package com.example.someSpring.PrimeChecker;
+package com.example.somespring.primechecker;
 
 import java.time.LocalTime;
 import java.util.concurrent.ExecutionException;
 
 public interface IPrimeChecker {
     boolean isPrimeNumber(long n, int iter) throws ExecutionException, InterruptedException;
+
+
+    static String getName() {
+        return "IPrimeChecker";
+    }
 
     default long phi(Long n) {
         long result = n;

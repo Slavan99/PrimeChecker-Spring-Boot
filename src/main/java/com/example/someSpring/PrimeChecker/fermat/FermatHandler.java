@@ -1,12 +1,14 @@
-package com.example.someSpring.PrimeChecker.fermat;
+package com.example.somespring.primechecker.fermat;
 
-import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import com.example.somespring.primechecker.IPrimeChecker;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+
 @Component
 @Scope("prototype")
 public class FermatHandler implements IPrimeChecker {
@@ -23,7 +25,7 @@ public class FermatHandler implements IPrimeChecker {
             long phi = phi(number);
             double eps = phi / (1.0 * number);
             double prob = eps * iter;
-            if(prob >= 100){
+            if (prob >= 100) {
                 prob = 100;
             }
             System.out.println("Число " + number + " простое с вероятностью " + Math.round(prob) + " %");
@@ -51,6 +53,11 @@ public class FermatHandler implements IPrimeChecker {
         }
         executorService.shutdown();
         return result;
+    }
+
+
+    public static String getName() {
+        return "Fermat";
     }
 
     static class FermatCheckerThread implements Callable<Boolean> {

@@ -1,7 +1,7 @@
-package com.example.someSpring.Service;
+package com.example.somespring.service;
 
-import com.example.someSpring.Entity.Algorithm;
-import com.example.someSpring.Repository.AlgorithmRepository;
+import com.example.somespring.entity.Algorithm;
+import com.example.somespring.repository.AlgorithmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

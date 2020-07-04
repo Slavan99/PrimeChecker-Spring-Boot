@@ -1,30 +1,24 @@
 
-package com.example.someSpring.Controller;
+package com.example.somespring.controller;
 
-import com.example.someSpring.Entity.Algorithm;
-import com.example.someSpring.Entity.History;
-import com.example.someSpring.Entity.User;
-import com.example.someSpring.PrimeChecker.fermat.FermatHandler;
-import com.example.someSpring.PrimeChecker.millerrabin.MillerRabinHandler;
-import com.example.someSpring.PrimeChecker.solovaystrassen.SolovayStrassenHandler;
-import com.example.someSpring.PrimeChecker.trialdivision.TrialDivisionHandler;
-import com.example.someSpring.Repository.AlgorithmRepository;
-import com.example.someSpring.Repository.HistoryRepository;
-import com.example.someSpring.Service.AlgorithmService;
-import com.example.someSpring.Service.HistoryService;
-import com.example.someSpring.Service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.example.somespring.entity.Algorithm;
+import com.example.somespring.entity.History;
+import com.example.somespring.entity.User;
+import com.example.somespring.service.AlgorithmService;
+import com.example.somespring.service.HistoryService;
+import com.example.somespring.service.PrimeNumberService;
+import com.example.somespring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -40,18 +34,23 @@ public class HistoryController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private PrimeNumberService primeNumberService;
+
 
     @GetMapping("/history")
-    public String history(@AuthenticationPrincipal User currentUser, Model model) {
+    public String history(@AuthenticationPrincipal User currentUser, Model model,
+                          @PageableDefault(sort = {"checkDateTime"},
+                                  direction = Sort.Direction.DESC) Pageable pageable) {
         if (currentUser != null) {
             model.addAttribute("username", currentUser.getName());
             model.addAttribute("isAdmin", currentUser.isAdmin());
             model.addAttribute("isAuth", true);
         }
-        List<History> historiesByUser = historyService.findByUser(currentUser);
+        Page<History> historiesByUser = historyService.findByUser(currentUser, pageable);
         List<Algorithm> algorithms = algorithmService.findAll();
         model.addAttribute("algos", algorithms);
-        if (historiesByUser.size() == 0) {
+        if (historiesByUser.getTotalElements() == 0) {
             model.addAttribute("message", "You have no history!");
         } else {
             model.addAttribute("message", "");
@@ -64,7 +63,9 @@ public class HistoryController {
     @PostMapping("/history")
     public String addHistory(@AuthenticationPrincipal User currentUser, @ModelAttribute("name") String algorithmName,
                              @ModelAttribute("number") String numberString,
-                             @ModelAttribute("iterations") String iterString, Model model) throws ExecutionException, InterruptedException {
-        return historyService.checkNumber(currentUser, algorithmName, numberString, iterString);
+                             @ModelAttribute("iterations") String iterString) throws ExecutionException, InterruptedException {
+        return primeNumberService.checkNumber(new History(), currentUser, algorithmName, numberString, iterString);
     }
+
+
 }

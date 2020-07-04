@@ -1,7 +1,7 @@
 {{> header}}
 {{> navbar}}
 {{message}}
-<form action="/history" method="post">
+<form action="/history" method="post" name="checkForm">
     <div>
         <label>
             Number to check :
@@ -10,7 +10,7 @@
     </div>
     <div>
         <label> Algorithm :
-            <select name="name">
+            <select name="name" id="algoSelect">
                 {{#algos}}
                     <option name="{{name}}">{{name}}</option>
                 {{/algos}}
@@ -18,15 +18,14 @@
         </label>
     </div>
     <div>
-        <label>
-            Iteration number :
+        <label>Iteration number :
             <input type="text" name="iterations"/>
         </label>
     </div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <div><input type="submit" value="Check number"/></div>
+    <div><input type="submit" class="btn btn-primary" value="Check number"/></div>
 </form>
-<div>
+<div class="yourHistory">
     <b>Your history</b>
 </div>
 {{#hashistory}}
@@ -36,6 +35,7 @@
             <th>Number</th>
             <th>Algorithm</th>
             <th>Iterations</th>
+            <th>Check date and time</th>
             <th>Result</th>
         </tr>
         </thead>
@@ -45,11 +45,27 @@
                 <td>{{number}}</td>
                 <td>{{algorithm}}</td>
                 <td>{{iterations}}</td>
+                <td>{{checkDateTime.toLocalDate}} {{checkDateTime.toLocalTime}}</td>
                 <td>{{result}}</td>
             </tr>
         {{/histories}}
         </tbody>
     </table>
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="/history?page=0">1</a></li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="/history?page=1">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="/history?page=2">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
 {{/hashistory}}
 <div>
     <a href="/" class="btn btn-primary">Back</a>

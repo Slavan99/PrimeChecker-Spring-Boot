@@ -1,18 +1,13 @@
-package com.example.someSpring.Controller;
+package com.example.somespring.controller;
 
-import com.example.someSpring.Entity.User;
-import com.example.someSpring.Service.UserService;
+import com.example.somespring.entity.User;
+import com.example.somespring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Map;
 import java.lang.String;
 
 @Controller

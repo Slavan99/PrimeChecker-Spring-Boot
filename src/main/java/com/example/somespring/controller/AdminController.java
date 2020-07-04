@@ -1,9 +1,8 @@
-package com.example.someSpring.Controller;
+package com.example.somespring.controller;
 
-import com.example.someSpring.Entity.Role;
-import com.example.someSpring.Entity.User;
-import com.example.someSpring.Repository.UserRepository;
-import com.example.someSpring.Service.UserService;
+import com.example.somespring.entity.Role;
+import com.example.somespring.entity.User;
+import com.example.somespring.service.UserService;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

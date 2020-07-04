@@ -2,17 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/HistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/IPrimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/IPrimeChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/Service/HistoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/AlgorithmRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/AlgorithmRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/HistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/HistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/AlgorithmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/AlgorithmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/HistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/HistoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" afterDir="false" />
@@ -30,8 +44,9 @@
       <list>
         <option value="Enum" />
         <option value="HTML File" />
-        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,15 +77,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/example/someSpring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.someSpring" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.someSpring.Service" />
+      <recent name="com.example.someSpring.SpringConfiguration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Вячеслав\IdeaProjects\someSpring\src\main\resources\templates" />
@@ -79,11 +99,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.someSpring.Application" />
-      <module name="someSpring" />
+      <option name="MAIN_CLASS_NAME" value="com.example.somespring.Application" />
+      <module name="some_spring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.someSpring.Controller.*" />
+          <option name="PATTERN" value="com.example.somespring.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,7 +130,14 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="599" y="0" key="#Application" timestamp="1593531111721">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="599" y="0" key="#Application/0.0.1280.680@0.0.1280.680" timestamp="1593531111721" />
     <state x="233" y="0" key="#Intentions" timestamp="1585663742048">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -123,58 +150,74 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Template_Data_Languages/0.0.1280.680@0.0.1280.680" timestamp="1590317773893" />
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1591438661349">
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1593859370223">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1591438661349" />
+    <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1593859370223" />
+    <state x="371" y="118" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1593440793987">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="118" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1593440793987" />
+    <state x="610" y="127" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593531109133">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="610" y="127" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1593531109133" />
     <state x="438" y="201" width="423" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589882732011">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="201" width="423" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1589882732011" />
-    <state x="567" y="97" key="FileChooserDialogImpl" timestamp="1591258339072">
+    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593786624308">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591258339072" />
-    <state width="1237" height="303" key="GridCell.Tab.0.bottom" timestamp="1591544855326">
+    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1593786624308" />
+    <state x="567" y="97" key="FileChooserDialogImpl" timestamp="1593692717980">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="303" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
-    <state width="1237" height="303" key="GridCell.Tab.0.center" timestamp="1591544855326">
+    <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593692717980" />
+    <state width="1237" height="199" key="GridCell.Tab.0.bottom" timestamp="1593869303695">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="303" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
-    <state width="1237" height="303" key="GridCell.Tab.0.left" timestamp="1591544855326">
+    <state width="1237" height="199" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593869303695" />
+    <state width="1237" height="199" key="GridCell.Tab.0.center" timestamp="1593869303695">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="303" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
-    <state width="1237" height="303" key="GridCell.Tab.0.right" timestamp="1591544855326">
+    <state width="1237" height="199" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593869303695" />
+    <state width="1237" height="199" key="GridCell.Tab.0.left" timestamp="1593869303694">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="303" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591544855326" />
-    <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1591034420113">
+    <state width="1237" height="199" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593869303694" />
+    <state width="1237" height="199" key="GridCell.Tab.0.right" timestamp="1593869303695">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="132" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591034420113" />
-    <state width="1237" height="132" key="GridCell.Tab.1.center" timestamp="1591034420113">
+    <state width="1237" height="199" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593869303695" />
+    <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1593859447201">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="132" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1591034420113" />
-    <state width="1237" height="132" key="GridCell.Tab.1.left" timestamp="1591034420113">
+    <state width="1237" height="132" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593859447201" />
+    <state width="1237" height="132" key="GridCell.Tab.1.center" timestamp="1593859447200">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="132" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1591034420113" />
-    <state width="1237" height="132" key="GridCell.Tab.1.right" timestamp="1591034420113">
+    <state width="1237" height="132" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1593859447200" />
+    <state width="1237" height="132" key="GridCell.Tab.1.left" timestamp="1593859447200">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="132" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1591034420113" />
+    <state width="1237" height="132" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1593859447200" />
+    <state width="1237" height="132" key="GridCell.Tab.1.right" timestamp="1593859447200">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="132" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1593859447200" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1588937313765">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1588937313765" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1586076273037">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1593858249115">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1586076273037" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593858249115" />
+    <state x="452" y="120" key="chooseDestDirectoryDialog" timestamp="1593530715844">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="452" y="120" key="chooseDestDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1593530715844" />
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1588322809219">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

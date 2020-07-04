@@ -1,6 +1,6 @@
-package com.example.someSpring.Repository;
+package com.example.somespring.repository;
 
-import com.example.someSpring.Entity.Algorithm;
+import com.example.somespring.entity.Algorithm;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AlgorithmRepository extends CrudRepository<Algorithm, Integer> {

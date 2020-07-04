@@ -1,10 +1,11 @@
-package com.example.someSpring.PrimeChecker.trialdivision;
+package com.example.somespring.primechecker.trialdivision;
 
-import com.example.someSpring.PrimeChecker.IPrimeChecker;
+import com.example.somespring.primechecker.IPrimeChecker;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -15,6 +16,8 @@ public class TrialDivisionHandler implements IPrimeChecker {
 
     private volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();
+
+
 
     public void handle(Long number) throws ExecutionException, InterruptedException {
         if (number < 3) {
@@ -47,6 +50,11 @@ public class TrialDivisionHandler implements IPrimeChecker {
         }
         executorService.shutdown();
         return result;
+    }
+
+
+    public static String getName() {
+        return "Trial";
     }
 
 
