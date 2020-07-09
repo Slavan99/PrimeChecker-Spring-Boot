@@ -4,6 +4,7 @@ import com.example.somespring.entity.Role;
 import com.example.somespring.entity.User;
 import com.example.somespring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,14 +14,9 @@ import org.springframework.ui.Model;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.locks.StampedLock;
 
 @Service
 public class UserService implements UserDetailsService {
-
-    public volatile static String currentName = "";
-    public volatile static String prevName = "";
-    public volatile static int count = 0;
 
     @Autowired
     private final UserRepository userRepository;
@@ -70,29 +66,16 @@ public class UserService implements UserDetailsService {
             model.addAttribute("message", "User exists!");
             return "registration";
         }
-        prevName = currentName;
-        currentName = user.getName();
-        if (count == 0) {
-            count++;
-            Thread.sleep(10000);
+        try {
             user.setActive(true);
             user.addRole(Role.USER);
             user.setPassword(passwordEncoder.encode(user.getPassword()));
-            userRepository.save(user);
-            count = 0;
+            userRepository.persist(user);
+
             return "redirect:/login";
-        } else {
-            if (prevName.equals(currentName)) {
-                model.addAttribute("message", "User exists!");
-                return "registration";
-            } else {
-                user.setActive(true);
-                user.addRole(Role.USER);
-                user.setPassword(passwordEncoder.encode(user.getPassword()));
-                userRepository.save(user);
-                return "redirect:/login";
-            }
+        } catch (DataIntegrityViolationException e) {
+            model.addAttribute("message", "User exists!");
+            return "registration";
         }
-        ///
     }
 }

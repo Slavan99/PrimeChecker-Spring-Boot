@@ -14,10 +14,7 @@ import java.util.concurrent.ExecutionException;
 
 
 @Service
-public class PrimeNumberService implements CommonService {
-
-    @Autowired
-    private AlgorithmService algorithmService;
+public class PrimeNumberService {
 
     @Autowired
     private HistoryService historyService;

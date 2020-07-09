@@ -28,9 +28,6 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
     @Autowired
     private AlgorithmService algorithmService;
 
-    @Autowired
-    private HistoryService historyService;
-
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
@@ -58,14 +55,12 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
                     });*/
 
 
-
                     MethodInterceptor handler = (o, method, objects, methodProxy) -> {
                         History historyAdd = (History) objects[0];
                         String algorithmName = (String) objects[2];
                         historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
                         return methodProxy.invoke(bean, objects);
                     };
-                    System.out.println(handler);
                     return Enhancer.create(beanClass, beanClass.getInterfaces(), handler);
                 }
             }
