@@ -5,8 +5,6 @@ import com.example.somespring.entity.User;
 import com.example.somespring.primechecker.IPrimeChecker;
 import com.example.somespring.springconfiguration.annotations.SaveHistory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

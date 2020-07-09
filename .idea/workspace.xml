@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/CommonService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/PrimeNumberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/IPrimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/IPrimeChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/fermat/FermatHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/millerrabin/MillerRabinHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/trialdivision/TrialDivisionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/HandlerResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/HandlerResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/annotations/SaveHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/annotations/SaveHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
