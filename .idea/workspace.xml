@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/IPrimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/IPrimeChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/fermat/FermatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/fermat/FermatHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/millerrabin/MillerRabinHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/millerrabin/MillerRabinHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/solovaystrassen/SolovayStrassenHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/PrimeChecker/trialdivision/TrialDivisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/PrimeChecker/trialdivision/TrialDivisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/HandlerResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/HandlerResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/annotations/SaveHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/annotations/SaveHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/someSpring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +118,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#Template_Data_Languages/0.0.1280.680@0.0.1280.680" timestamp="1590317773893" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594635096500">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1594635096500" />
     <state x="446" y="26" key="#com.intellij.ide.util.MemberChooser" timestamp="1594304196939">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -148,22 +146,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594050082893" />
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom" timestamp="1594312134439">
+    <state width="1237" height="237" key="GridCell.Tab.0.bottom" timestamp="1594640165307">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594312134439" />
-    <state width="1237" height="237" key="GridCell.Tab.0.center" timestamp="1594312134439">
+    <state width="1237" height="237" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
+    <state width="1237" height="237" key="GridCell.Tab.0.center" timestamp="1594640165307">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594312134439" />
-    <state width="1237" height="237" key="GridCell.Tab.0.left" timestamp="1594312134438">
+    <state width="1237" height="237" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
+    <state width="1237" height="237" key="GridCell.Tab.0.left" timestamp="1594640165307">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594312134438" />
-    <state width="1237" height="237" key="GridCell.Tab.0.right" timestamp="1594312134439">
+    <state width="1237" height="237" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
+    <state width="1237" height="237" key="GridCell.Tab.0.right" timestamp="1594640165307">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594312134439" />
+    <state width="1237" height="237" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
     <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1593871219853">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

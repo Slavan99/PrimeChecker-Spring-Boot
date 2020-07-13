@@ -56,6 +56,11 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    private String existingUserHandle(Model model) {
+        model.addAttribute("message", "User exists!");
+        return "registration";
+    }
+
     public String registerUser(User user, Model model) throws Exception {
         if (user.getName().equals("") || user.getPassword().equals("")) {
             model.addAttribute("message", "Wrong data input!");
@@ -63,8 +68,7 @@ public class UserService implements UserDetailsService {
         }
         User byName = userRepository.findByName(user.getName());
         if (byName != null) {
-            model.addAttribute("message", "User exists!");
-            return "registration";
+            return existingUserHandle(model);
         }
         try {
             user.setActive(true);
@@ -74,8 +78,7 @@ public class UserService implements UserDetailsService {
 
             return "redirect:/login";
         } catch (DataIntegrityViolationException e) {
-            model.addAttribute("message", "User exists!");
-            return "registration";
+            return existingUserHandle(model);
         }
     }
 }

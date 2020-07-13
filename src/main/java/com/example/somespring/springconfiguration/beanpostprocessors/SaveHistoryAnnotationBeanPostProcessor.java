@@ -1,6 +1,5 @@
 package com.example.somespring.springconfiguration.beanpostprocessors;
 
-import com.example.somespring.entity.Algorithm;
 import com.example.somespring.entity.History;
 import com.example.somespring.service.AlgorithmService;
 import com.example.somespring.service.HistoryService;
@@ -10,13 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
-import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +22,9 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
 
     @Autowired
     private AlgorithmService algorithmService;
+
+    @Autowired
+    private HistoryService historyService;
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -59,7 +57,9 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
                         History historyAdd = (History) objects[0];
                         String algorithmName = (String) objects[2];
                         historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
-                        return methodProxy.invoke(bean, objects);
+                        Object res = methodProxy.invoke(bean, objects);
+                        historyService.save(historyAdd);
+                        return res;
                     };
                     return Enhancer.create(beanClass, beanClass.getInterfaces(), handler);
                 }
