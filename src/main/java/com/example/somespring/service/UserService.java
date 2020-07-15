@@ -4,13 +4,12 @@ import com.example.somespring.entity.Role;
 import com.example.somespring.entity.User;
 import com.example.somespring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.List;
 import java.util.Optional;
@@ -56,29 +55,25 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    private String existingUserHandle(Model model) {
-        model.addAttribute("message", "User exists!");
-        return "registration";
-    }
-
-    public String registerUser(User user, Model model) throws Exception {
+    public void registerUser(User user) throws Exception {
         if (user.getName().equals("") || user.getPassword().equals("")) {
-            model.addAttribute("message", "Wrong data input!");
-            return "registration";
+            throw new Exception();
         }
         User byName = userRepository.findByName(user.getName());
         if (byName != null) {
-            return existingUserHandle(model);
+            throw new UserAlreadyExistAuthenticationException("User exists!");
         }
-        try {
-            user.setActive(true);
-            user.addRole(Role.USER);
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            userRepository.persist(user);
+        user.setActive(true);
+        user.addRole(Role.USER);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.persist(user);
+    }
 
-            return "redirect:/login";
-        } catch (DataIntegrityViolationException e) {
-            return existingUserHandle(model);
+    public static class UserAlreadyExistAuthenticationException extends AuthenticationException {
+
+        public UserAlreadyExistAuthenticationException(final String msg) {
+            super(msg);
         }
+
     }
 }

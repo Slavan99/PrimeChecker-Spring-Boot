@@ -8,8 +8,10 @@ import com.example.somespring.service.AlgorithmService;
 import com.example.somespring.service.HistoryService;
 import com.example.somespring.service.PrimeNumberService;
 import com.example.somespring.service.UserService;
+import org.apache.commons.lang.mutable.MutableBoolean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -37,11 +39,9 @@ public class HistoryController {
     @Autowired
     private PrimeNumberService primeNumberService;
 
-
     @GetMapping("/history")
-    public String history(@AuthenticationPrincipal User currentUser, Model model,
-                          @PageableDefault(sort = {"checkDateTime"},
-                                  direction = Sort.Direction.DESC) Pageable pageable) {
+    public String history(@AuthenticationPrincipal User currentUser, Model model) {
+        Pageable pageable = PageRequest.of(0, 10, Sort.Direction.DESC, "checkDateTime");
         if (currentUser != null) {
             model.addAttribute("username", currentUser.getName());
             model.addAttribute("isAdmin", currentUser.isAdmin());
@@ -50,6 +50,9 @@ public class HistoryController {
         Page<History> historiesByUser = historyService.findByUser(currentUser, pageable);
         List<Algorithm> algorithms = algorithmService.findAll();
         model.addAttribute("algos", algorithms);
+        if (model.getAttribute("inputmessage") == null) {
+            model.addAttribute("inputmessage", "");
+        }
         if (historiesByUser.getTotalElements() == 0) {
             model.addAttribute("message", "You have no history!");
         } else {
@@ -63,8 +66,14 @@ public class HistoryController {
     @PostMapping("/history")
     public String addHistory(@AuthenticationPrincipal User currentUser, @ModelAttribute("name") String algorithmName,
                              @ModelAttribute("number") String numberString,
-                             @ModelAttribute("iterations") String iterString) throws ExecutionException, InterruptedException {
-        return primeNumberService.checkNumber(new History(), currentUser, algorithmName, numberString, iterString);
+                             @ModelAttribute("iterations") String iterString, Model model) throws ExecutionException, InterruptedException {
+        try {
+            primeNumberService.checkNumber(currentUser, algorithmName, numberString, iterString);
+        } catch (NumberFormatException e) {
+            model.addAttribute("inputmessage", "Wrong data input!");
+            return history(currentUser, model);
+        }
+        return "redirect:/history";
     }
 
 

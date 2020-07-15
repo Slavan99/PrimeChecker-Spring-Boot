@@ -1,9 +1,11 @@
 package com.example.somespring.springconfiguration.beanpostprocessors;
 
 import com.example.somespring.entity.History;
+import com.example.somespring.entity.User;
 import com.example.somespring.service.AlgorithmService;
 import com.example.somespring.service.HistoryService;
 import com.example.somespring.springconfiguration.annotations.SaveHistory;
+import org.apache.commons.lang.mutable.MutableBoolean;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -12,6 +14,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,10 +57,21 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
 
 
                     MethodInterceptor handler = (o, method, objects, methodProxy) -> {
-                        History historyAdd = (History) objects[0];
-                        String algorithmName = (String) objects[2];
-                        historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
+                        History historyAdd = new History();
                         Object res = methodProxy.invoke(bean, objects);
+                        boolean result = (boolean) res;
+                        User currentUser = (User) objects[0];
+                        String algorithmName = (String) objects[1];
+                        String numberString = (String) objects[2];
+                        String iterString = (String) objects[3];
+                        long number = Long.parseLong(numberString);
+                        int iterations = Integer.parseInt(iterString);
+                        historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
+                        historyAdd.setUser(currentUser);
+                        historyAdd.setResult(result);
+                        historyAdd.setNumber(number);
+                        historyAdd.setIterations(iterations);
+                        historyAdd.setCheckDateTime(LocalDateTime.now());
                         historyService.save(historyAdd);
                         return res;
                     };

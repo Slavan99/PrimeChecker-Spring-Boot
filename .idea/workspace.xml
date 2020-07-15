@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,26 +145,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594300574784" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1594735137927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1594735137927" />
     <state x="567" y="97" key="FileChooserDialogImpl" timestamp="1594050082893">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594050082893" />
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom" timestamp="1594640165307">
+    <state width="1237" height="175" key="GridCell.Tab.0.bottom" timestamp="1594743279390">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
-    <state width="1237" height="237" key="GridCell.Tab.0.center" timestamp="1594640165307">
+    <state width="1237" height="175" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594743279390" />
+    <state width="1237" height="175" key="GridCell.Tab.0.center" timestamp="1594743279390">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
-    <state width="1237" height="237" key="GridCell.Tab.0.left" timestamp="1594640165307">
+    <state width="1237" height="175" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594743279390" />
+    <state width="1237" height="175" key="GridCell.Tab.0.left" timestamp="1594743279390">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
-    <state width="1237" height="237" key="GridCell.Tab.0.right" timestamp="1594640165307">
+    <state width="1237" height="175" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594743279390" />
+    <state width="1237" height="175" key="GridCell.Tab.0.right" timestamp="1594743279390">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="237" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594640165307" />
+    <state width="1237" height="175" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594743279390" />
     <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1593871219853">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -194,10 +201,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588322809219" />
-    <state x="315" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586008529993">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="315" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680@0.0.1280.680" timestamp="1586008529993" />
     <state x="269" y="37" width="742" height="606" key="find.popup" timestamp="1588937587876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
