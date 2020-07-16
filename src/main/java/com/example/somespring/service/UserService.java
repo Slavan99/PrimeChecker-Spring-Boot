@@ -2,9 +2,10 @@ package com.example.somespring.service;
 
 import com.example.somespring.entity.Role;
 import com.example.somespring.entity.User;
+import com.example.somespring.exception.IncorrectDataException;
+import com.example.somespring.exception.UserAlreadyExistAuthenticationException;
 import com.example.somespring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -57,7 +58,7 @@ public class UserService implements UserDetailsService {
 
     public void registerUser(User user) throws Exception {
         if (user.getName().equals("") || user.getPassword().equals("")) {
-            throw new Exception();
+            throw new IncorrectDataException();
         }
         User byName = userRepository.findByName(user.getName());
         if (byName != null) {
@@ -69,11 +70,5 @@ public class UserService implements UserDetailsService {
         userRepository.persist(user);
     }
 
-    public static class UserAlreadyExistAuthenticationException extends AuthenticationException {
 
-        public UserAlreadyExistAuthenticationException(final String msg) {
-            super(msg);
-        }
-
-    }
 }

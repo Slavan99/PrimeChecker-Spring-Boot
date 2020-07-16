@@ -1,6 +1,8 @@
 package com.example.somespring.controller;
 
 import com.example.somespring.entity.User;
+import com.example.somespring.exception.IncorrectDataException;
+import com.example.somespring.exception.UserAlreadyExistAuthenticationException;
 import com.example.somespring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -29,9 +31,9 @@ public class RegistrationController {
     public String addUser(User user, Model model) throws Exception {
         try {
             userService.registerUser(user);
-        } catch (DataIntegrityViolationException | UserService.UserAlreadyExistAuthenticationException e) {
+        } catch (DataIntegrityViolationException | UserAlreadyExistAuthenticationException e) {
             return existingUserHandle(model);
-        } catch (Exception e) {
+        } catch (IncorrectDataException e) {
             model.addAttribute("message", "Wrong data input!");
             return "registration";
         }
