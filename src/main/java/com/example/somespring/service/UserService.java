@@ -38,22 +38,20 @@ public class UserService implements UserDetailsService {
         return userRepository.findAll();
     }
 
-    public void handleUserActiveAndAdmin(Integer user_id, String active, String admin) {
-        Optional<User> userById = userRepository.findById(user_id);
-        if (userById.isPresent()) {
-            User user = userById.get();
-            if ("true".equals(active)) {
-                user.setActive(true);
-            } else {
-                user.setActive(false);
-            }
-            if ("true".equals(admin)) {
-                user.addRole(Role.ADMIN);
-            } else {
-                user.getAuthorities().remove(Role.ADMIN);
-            }
-            userRepository.save(user);
+    public void handleUserActiveAndAdmin(String user_name, boolean active, boolean admin) {
+        User user = userRepository.findByName(user_name);
+
+        if (active) {
+            user.setActive(true);
+        } else {
+            user.setActive(false);
         }
+        if (admin) {
+            user.addRole(Role.ADMIN);
+        } else {
+            user.getAuthorities().remove(Role.ADMIN);
+        }
+        userRepository.save(user);
     }
 
     public void registerUser(User user) throws Exception {

@@ -18,19 +18,6 @@ public class TrialDivisionHandler implements IPrimeChecker {
     private static int threadCount = Runtime.getRuntime().availableProcessors();
 
 
-
-    public void handle(Long number) throws ExecutionException, InterruptedException {
-        if (number < 3) {
-            System.out.println("Число должно быть не меньше 3!");
-            System.exit(0);
-        }
-        boolean result = isPrimeNumber(number, 0);
-        if (result)
-            System.out.println("Число " + number + " простое");
-        else
-            System.out.println("Число " + number + " составное");
-    }
-
     @Override
     public boolean isPrimeNumber(long number, int iter) throws ExecutionException, InterruptedException {
         found = false;

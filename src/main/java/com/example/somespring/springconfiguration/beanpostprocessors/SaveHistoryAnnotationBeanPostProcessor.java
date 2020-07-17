@@ -62,10 +62,8 @@ public class SaveHistoryAnnotationBeanPostProcessor implements BeanPostProcessor
                         boolean result = (boolean) res;
                         User currentUser = (User) objects[0];
                         String algorithmName = (String) objects[1];
-                        String numberString = (String) objects[2];
-                        String iterString = (String) objects[3];
-                        long number = Long.parseLong(numberString);
-                        int iterations = Integer.parseInt(iterString);
+                        long number = (long) objects[2];
+                        int iterations = (int) objects[3];
                         historyAdd.setAlgorithm(algorithmService.findByName(algorithmName));
                         historyAdd.setUser(currentUser);
                         historyAdd.setResult(result);

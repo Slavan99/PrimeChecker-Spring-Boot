@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf7910d-4b77-48b0-9d2f-289b4f760c61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/controller/HistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/fermat/FermatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/fermat/FermatHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/millerrabin/MillerRabinHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/millerrabin/MillerRabinHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/solovaystrassen/SolovayStrassenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/solovaystrassen/SolovayStrassenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/trialdivision/TrialDivisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/primechecker/trialdivision/TrialDivisionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/PrimeNumberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/somespring/springconfiguration/beanpostprocessors/SaveHistoryAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,22 +158,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="567" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594050082893" />
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom" timestamp="1594898271375">
+    <state width="1237" height="79" key="GridCell.Tab.0.bottom" timestamp="1594975804975">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594898271375" />
-    <state width="1237" height="133" key="GridCell.Tab.0.center" timestamp="1594898271375">
+    <state width="1237" height="79" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594975804975" />
+    <state width="1237" height="79" key="GridCell.Tab.0.center" timestamp="1594975804974">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594898271375" />
-    <state width="1237" height="133" key="GridCell.Tab.0.left" timestamp="1594898271374">
+    <state width="1237" height="79" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594975804974" />
+    <state width="1237" height="79" key="GridCell.Tab.0.left" timestamp="1594975804974">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594898271374" />
-    <state width="1237" height="133" key="GridCell.Tab.0.right" timestamp="1594898271375">
+    <state width="1237" height="79" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594975804974" />
+    <state width="1237" height="79" key="GridCell.Tab.0.right" timestamp="1594975804974">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594898271375" />
+    <state width="1237" height="79" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594975804974" />
     <state width="1237" height="132" key="GridCell.Tab.1.bottom" timestamp="1593871219853">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

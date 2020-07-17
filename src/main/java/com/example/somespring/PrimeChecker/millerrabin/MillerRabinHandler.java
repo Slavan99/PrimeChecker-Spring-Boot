@@ -18,26 +18,6 @@ public class MillerRabinHandler implements IPrimeChecker {
     private static volatile boolean found = false;
     private static int threadCount = Runtime.getRuntime().availableProcessors();
 
-    public void handle(Long number, int iter) throws ExecutionException, InterruptedException {
-        if (number < 3) {
-            System.out.println("Число должно быть не меньше 3!");
-            System.exit(0);
-        }
-        boolean result = isPrimeNumber(number, iter);
-        if (result) {
-            long phi = phi(number);
-            double eps = phi / (4.0 * number);
-            double prob = eps * iter;
-            if (prob >= 100) {
-                prob = 100;
-            }
-            System.out.println("Число " + number + " простое с вероятностью " + Math.round(prob) + " %");
-        } else {
-            System.out.println("Число " + number + " составное");
-        }
-
-    }
-
     @Override
     public boolean isPrimeNumber(long number, int iter) throws ExecutionException, InterruptedException {
         found = false;

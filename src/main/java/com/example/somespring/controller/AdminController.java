@@ -18,47 +18,6 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private Logger logger;
-
-
-    /*@GetMapping("/hello")
-    public String hello(Model model) {
-        User user = (User) userService.loadUserByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
-        if (!user.getAuthorities().contains(Role.ADMIN)) {
-            return "redirect:/";
-        }
-        Iterable<User> users = userRepository.findAll();
-        logger.info("Users put : " + users);
-        model.addAttribute("users", users);
-        model.addAttribute("message", "This is message");
-        return "hello";
-    }
-
-    @PostMapping("/hello")
-    public String postUser(@Valid User user, @ModelAttribute("active") String activeStr,
-                           @ModelAttribute("admin") String adminStr, Model model) {
-        try {
-            logger.info("Model users : " + model.getAttribute("users"));
-            logger.info("Model message : " + model.getAttribute("message"));
-            logger.info("User : " + user);
-            if ("true".equals(activeStr)) {
-                user.setActive(true);
-            } else if ("false".equals(activeStr)) {
-                user.setActive(false);
-            }
-            if ("true".equals(adminStr)) {
-                user.addRole(Role.ADMIN);
-            } else {
-                user.getAuthorities().remove(Role.ADMIN);
-            }
-            userRepository.save(user);
-        } catch (NullPointerException npe) {
-            logger.info(Arrays.toString(npe.getStackTrace()));
-        }
-
-        return "redirect:/hello";
-    }*/
 
     @GetMapping("/admin")
     public String admin(@AuthenticationPrincipal User currentUser, Model model) {
@@ -76,10 +35,10 @@ public class AdminController {
     }
 
     @PostMapping("/admin")
-    public String postUser(@AuthenticationPrincipal User currentUser, @RequestParam Integer user_id,
-                           @RequestParam String active, @RequestParam String admin) {
+    public String postUser(@AuthenticationPrincipal User currentUser, @RequestParam String user_name,
+                           @RequestParam boolean active, @RequestParam boolean admin) {
         if (currentUser.getAuthorities().contains(Role.ADMIN)) {
-            userService.handleUserActiveAndAdmin(user_id, active, admin);
+            userService.handleUserActiveAndAdmin(user_name, active, admin);
         }
         return "redirect:/admin";
     }

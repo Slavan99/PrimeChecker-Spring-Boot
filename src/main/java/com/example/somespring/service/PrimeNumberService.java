@@ -17,11 +17,7 @@ public class PrimeNumberService {
     private HandlerResolver handlerResolver;
 
     @SaveHistory
-    public boolean checkNumber(User currentUser, String algorithmName, String numberString, String iterString) throws ExecutionException, InterruptedException {
-        long number;
-        int iterations;
-        number = Long.parseLong(numberString);
-        iterations = Integer.parseInt(iterString);
+    public boolean checkNumber(User currentUser, String algorithmName, long number, int iterations) throws ExecutionException, InterruptedException {
         IPrimeChecker primeChecker = handlerResolver.getCheckerByName(algorithmName);
         return primeChecker.isPrimeNumber(number, iterations);
     }

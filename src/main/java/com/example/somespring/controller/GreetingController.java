@@ -30,21 +30,6 @@ public class GreetingController {
         }
         return "greeting";
     }
-    /*
-    @PostMapping("filter")
-    public String filter(@RequestParam String filter, Map<String, Object> model){
-        Iterable<User> byName;
-        if(filter != null && !filter.isEmpty()) {
-            byName = userRepository.findByName(filter);
-        }
-        else{
-            byName = userRepository.findAll();
-        }
-        model.put("users", byName);
 
-        return "hello";
-    }
-
-     */
 
 }

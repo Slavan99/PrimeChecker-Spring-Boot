@@ -68,7 +68,9 @@ public class HistoryController {
                              @ModelAttribute("number") String numberString,
                              @ModelAttribute("iterations") String iterString, Model model) throws ExecutionException, InterruptedException {
         try {
-            primeNumberService.checkNumber(currentUser, algorithmName, numberString, iterString);
+            long number = Long.parseLong(numberString);
+            int iterations = Integer.parseInt(iterString);
+            primeNumberService.checkNumber(currentUser, algorithmName, number, iterations);
         } catch (NumberFormatException e) {
             model.addAttribute("inputmessage", "Wrong data input!");
             return history(currentUser, model);
